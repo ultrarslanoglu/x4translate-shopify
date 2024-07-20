@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Translation App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/guide">Guide</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/support">Support</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to the Shopify Translation App</h1>
+            <p>Translate your entire store content to Turkish with ease.</p>
+        </section>
+
+        <section id="guide">
+            <h2>How to Use</h2>
+            <p>Step-by-step guide to using the translation app.</p>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>
+                <b>Free Plan</b>: Limited Usage (1,000 characters per month)<br>
+                <b>Standard Plan</b>: Medium Usage (50,000 characters per month, $20/month)<br>
+                <b>Premium Plan</b>: Unlimited Usage ($50/month)
+            </p>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <form id="settingsForm">
+                <label for="api_key">OpenAI API Key:</label>
+                <input type="text" id="api_key" name="api_key"><br>
+                <label for="wp_username">WordPress Username:</label>
+                <input type="text" id="wp_username" name="wp_username"><br>
+                <label for="wp_password">WordPress Password:</label>
+                <input type="password" id="wp_password" name="wp_password"><br>
+                <label for="shopify_api_key">Shopify API Key:</label>
+                <input type="text" id="shopify_api_key" name="shopify_api_key"><br>
+                <label for="shopify_password">Shopify Password:</label>
+                <input type="password" id="shopify_password" name="shopify_password"><br>
+                <input type="submit" value="Save Settings">
+            </form>
+        </section>
+        
+        <section id="support">
+            <h2>Support</h2>
+            <div id="chatbox">
+                <div id="chatlogs"></div>
+                <input type="text" id="user_input" placeholder="Type your message here...">
+                <button type="button" onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Shopify Translation App</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
